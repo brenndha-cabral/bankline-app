@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TransitionListComponent } from './components/transition-list/transition-list.component';
 import { TransitionNewComponent } from './components/transition-new/transition-new.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TransitionNewComponent } from './components/transition-new/transition-n
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
