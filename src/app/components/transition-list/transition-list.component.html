@@ -1,4 +1,17 @@
-<table class="table table-striped">
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-6">Transitions</h1>
+    <p class="lead-1">Listagem das movimentações por correntista</p>
+    <hr class="my-2">
+    <div class="input-group">
+      <select  id="iCLient" [(ngModel)]="clients" class="form-select">
+        <option *ngFor="let c of clientSelected" [ngValue]="c" >{{c.cpf}}-{{c.name}}</option>
+      </select>
+    <button class="btn btn-outline-secondary me-md-2 btn-sm" type="button" (click)="listTransitions()">Find</button>
+    <a class="btn btn-outline-primary btn-sm" routerLink="/transition-new">New Transition</a>
+    <a class="btn btn-outline-primary btn-sm" routerLink="/clients">Clients</a>
+  </div>
+  <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -11,10 +24,11 @@
     <tbody>
       <tr *ngFor="let transition of transitions; index as i">
         <th scope="row">{{ i + 1 }}</th>
-        <td>{{ transition.dataHora }}</td>
-        <td>{{ transition.descricao }}</td>
-        <td>{{ transition.valor }}</td>
-        <td>{{ transition.tipo }}</td>
+        <td>{{ transition.dateHour | date: 'dd/MM/yyyy HH:mm:ss' }}</td>
+        <td>{{ transition.description }}</td>
+        <td [ngStyle]="{'color': transition.type === 'INCOME' ? 'blue' : 'red'}">{{ transition.value | currency:'BRL' }}</td>
+        <td>{{ transition.type }}</td>
       </tr>
     </tbody>
   </table>
+</div>

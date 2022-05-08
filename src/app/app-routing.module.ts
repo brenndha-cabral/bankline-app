@@ -4,7 +4,7 @@ import { TransitionNewComponent } from './components/transition-new/transition-n
 import { TransitionListComponent } from './components/transition-list/transition-list.component';
 
 const routes: Routes = [
-  { path: 'transitions-new', component: TransitionNewComponent },
+  { path: 'transition-new', component: TransitionNewComponent },
   { path: 'transitions', component: TransitionListComponent },
   { path: '', redirectTo: 'transitions', pathMatch: 'full' },
 ];
