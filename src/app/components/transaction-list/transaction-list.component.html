@@ -8,7 +8,7 @@
         <option *ngFor="let c of clients" [ngValue]="c" >{{c.cpf}}-{{c.name}}</option>
       </select>
     <button class="btn btn-outline-secondary me-md-2 btn-sm" type="button" (click)="listTransactions()">Find</button>
-    <a class="btn btn-outline-primary btn-sm" routerLink="/transaction-new">New Transact</a>
+    <a class="btn btn-outline-primary btn-sm" routerLink="/transaction-new">New Transaction</a>
     <a class="btn btn-outline-primary btn-sm" routerLink="/clients">Clients</a>
   </div>
   <table class="table table-striped">
