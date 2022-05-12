@@ -1,14 +1,14 @@
 <div class="container">
   <div class="jumbotron">
-    <h1 class="display-6">Transitions</h1>
-    <p class="lead-1">Listagem das movimentações por correntista</p>
+    <h1 class="display-6">Transactions</h1>
+    <p class="lead-1">Transactions List by Clients</p>
     <hr class="my-2">
     <div class="input-group">
       <select  id="iCLient" [(ngModel)]="clientSelected" class="form-select">
         <option *ngFor="let c of clients" [ngValue]="c" >{{c.cpf}}-{{c.name}}</option>
       </select>
     <button class="btn btn-outline-secondary me-md-2 btn-sm" type="button" (click)="listTransitions()">Find</button>
-    <a class="btn btn-outline-primary btn-sm" routerLink="/transition-new">New Transition</a>
+    <a class="btn btn-outline-primary btn-sm" routerLink="/transition-new">New Transaction</a>
     <a class="btn btn-outline-primary btn-sm" routerLink="/clients">Clients</a>
   </div>
   <table class="table table-striped">
