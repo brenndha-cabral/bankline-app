@@ -4,8 +4,8 @@
     <p class="lead-1">Listagem das movimentações por correntista</p>
     <hr class="my-2">
     <div class="input-group">
-      <select  id="iCLient" [(ngModel)]="clients" class="form-select">
-        <option *ngFor="let c of clientSelected" [ngValue]="c" >{{c.cpf}}-{{c.name}}</option>
+      <select  id="iCLient" [(ngModel)]="clientSelected" class="form-select">
+        <option *ngFor="let c of clients" [ngValue]="c" >{{c.cpf}}-{{c.name}}</option>
       </select>
     <button class="btn btn-outline-secondary me-md-2 btn-sm" type="button" (click)="listTransitions()">Find</button>
     <a class="btn btn-outline-primary btn-sm" routerLink="/transition-new">New Transition</a>

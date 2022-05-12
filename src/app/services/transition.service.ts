@@ -8,10 +8,14 @@ const baseURL = 'https://dio-santander-bankline-api.herokuapp.com';
   providedIn: 'root'
 })
 export class TransitionService {
+
   constructor(private http: HttpClient) { }
 
   list(): Observable<any> {
     return this.http.get(`${ baseURL }/transitions`);
+  }
+  findByIdAccount(id:any): Observable<any> {
+    return this.http.get(`${ baseURL }/transitions/${id}`);
   }
 // adicionando o método de inclusão (POST) via API
   create(transition:any): Observable<any> {
