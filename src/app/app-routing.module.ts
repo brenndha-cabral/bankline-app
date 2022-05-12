@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TransitionNewComponent } from './components/transition-new/transition-new.component';
-import { TransitionListComponent } from './components/transition-list/transition-list.component';
+import { TransactionNewComponent } from './components/transaction-new/transaction-new.component';
+import { TransactionListComponent } from './components/transaction-list/transaction-list.component';
 import { ClientComponent } from './components/client/client.component';
 
 const routes: Routes = [
-  { path: 'transition-new', component: TransitionNewComponent },
-  { path: 'transitions', component: TransitionListComponent },
+  { path: 'transaction-new', component: TransactionNewComponent },
+  { path: 'transactions', component: TransactionListComponent },
   { path: 'clients', component: ClientComponent },
-  { path: '', redirectTo: 'transitions', pathMatch: 'full' },
+  { path: '', redirectTo: 'transactions', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from 'src/app/services/client.service';
-import { TransitionService } from '../../services/transition.service';
+import { TransactionService } from '../../services/transaction.service';
 
 @Component({
-  selector: 'app-transition-list',
-  templateUrl: './transition-list.component.html',
-  styleUrls: ['./transition-list.component.css']
+  selector: 'app-transaction-list',
+  templateUrl: './transaction-list.component.html',
+  styleUrls: ['./transaction-list.component.css']
 })
-export class TransitionListComponent implements OnInit {
-  transitions: any;
+export class TransactionListComponent implements OnInit {
+  transactions: any;
   clients:any;
   clientSelected:any;
 
   constructor(
-    private transitionService: TransitionService,
+    private transactionService: TransactionService,
     private clientService: ClientService
 
     ) { }
@@ -33,11 +33,11 @@ export class TransitionListComponent implements OnInit {
           console.log(error);
         });
   }
-  listTransitions(): void {
-    this.transitionService.findByIdAccount(this.clientSelected.id)
+  listTransactions(): void {
+    this.transactionService.findByIdAccount(this.clientSelected.id)
       .subscribe(
         data => {
-          this.transitions = data;
+          this.transactions = data;
           console.log(data);
         },
         error => {

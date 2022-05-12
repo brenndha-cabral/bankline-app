@@ -1,7 +1,7 @@
 <div class="container">
   <div class="jumbotron">
-    <h1 class="display-6">Transitions</h1>
-    <p class="lead-1">Inclusion of a new transition</p>
+    <h1 class="display-6">Transactions</h1>
+    <p class="lead-1">Inclusion of a new transaction</p>
     <hr class="my-2">
     <div class="col-md-3">
       <label for="iDate" class="form-label">Date</label>
@@ -19,7 +19,7 @@
       <input type="text" [(ngModel)]="description" class="form-control" id="iDescription" placeholder="Insert a description">
     </div>
     <div class="col-md-3">
-      <label for="iType" class="form-label">Transition Type</label>
+      <label for="iType" class="form-label">Transaction Type</label>
       <select id="iType" [(ngModel)]="type" class="form-select">
         <option selected disabled>Select</option>
         <option>INCOME</option>
@@ -32,7 +32,7 @@
     </div>
     <div class="d-grid gap-2 d-md-flex ">
       <button class="btn btn-outline-primary me-md-2" type="button" (click)="save()">Confirm</button>
-      <a routerLink="/transitions" class="btn btn-outline-secondary">Cancel</a>
+      <a routerLink="/transactions" class="btn btn-outline-secondary">Cancel</a>
     </div>
 
   </div>

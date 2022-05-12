@@ -7,8 +7,8 @@
       <select  id="iCLient" [(ngModel)]="clientSelected" class="form-select">
         <option *ngFor="let c of clients" [ngValue]="c" >{{c.cpf}}-{{c.name}}</option>
       </select>
-    <button class="btn btn-outline-secondary me-md-2 btn-sm" type="button" (click)="listTransitions()">Find</button>
-    <a class="btn btn-outline-primary btn-sm" routerLink="/transition-new">New Transaction</a>
+    <button class="btn btn-outline-secondary me-md-2 btn-sm" type="button" (click)="listTransactions()">Find</button>
+    <a class="btn btn-outline-primary btn-sm" routerLink="/transaction-new">New Transact</a>
     <a class="btn btn-outline-primary btn-sm" routerLink="/clients">Clients</a>
   </div>
   <table class="table table-striped">
@@ -22,12 +22,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let transition of transitions; index as i">
+      <tr *ngFor="let transaction of transactions; index as i">
         <th scope="row">{{ i + 1 }}</th>
-        <td>{{ transition.dateHour | date: 'dd/MM/yyyy HH:mm:ss' }}</td>
-        <td>{{ transition.description }}</td>
-        <td [ngStyle]="{'color': transition.type === 'INCOME' ? 'blue' : 'red'}">{{ transition.value | currency:'BRL' }}</td>
-        <td>{{ transition.type }}</td>
+        <td>{{ transaction.dateHour | date: 'dd/MM/yyyy HH:mm:ss' }}</td>
+        <td>{{ transaction.description }}</td>
+        <td [ngStyle]="{'color': transaction.type === 'INCOME' ? 'blue' : 'red'}">{{ transaction.value | currency:'BRL' }}</td>
+        <td>{{ transaction.type }}</td>
       </tr>
     </tbody>
   </table>

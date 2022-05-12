@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TransitionListComponent } from './components/transition-list/transition-list.component';
-import { TransitionNewComponent } from './components/transition-new/transition-new.component';
+import { TransactionListComponent } from './components/transaction-list/transaction-list.component';
+import { TransactionNewComponent } from './components/transaction-new/transaction-new.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
@@ -17,8 +17,8 @@ registerLocaleData(localePt);
 @NgModule({
   declarations: [
     AppComponent,
-    TransitionListComponent,
-    TransitionNewComponent,
+    TransactionListComponent,
+    TransactionNewComponent,
     ClientComponent
   ],
   imports: [
