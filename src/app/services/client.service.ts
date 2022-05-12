@@ -14,4 +14,7 @@ export class ClientService {
   list(): Observable<any> {
     return this.http.get(`${ baseUrl }/clients`);
   }
+  create(client:any): Observable<any> {
+    return this.http.post(`${baseUrl}/clients`, client);
+  }
 }

@@ -11,13 +11,15 @@ import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { CurrencyMaskModule } from "ng2-currency-mask";
+import { ClientComponent } from './components/client/client.component';
 
 registerLocaleData(localePt);
 @NgModule({
   declarations: [
     AppComponent,
     TransitionListComponent,
-    TransitionNewComponent
+    TransitionNewComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,
